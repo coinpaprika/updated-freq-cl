@@ -52,8 +52,6 @@ func main() {
 	multiWriter := io.MultiWriter(os.Stdout, file)
 
 	go func() {
-		var lastPrice float64
-		timeTicker := time.NewTicker(10 * time.Second)
 		csvWriter := csv.NewWriter(multiWriter)
 		_ = csvWriter.Write([]string{
 			"ticker_id",                            // ticker ID from Coinpaprika API
@@ -63,8 +61,10 @@ func main() {
 			"price_changed", // if price changed since last update
 		})
 
+		var lastPrice float64
+		timeTicker := time.NewTicker(10 * time.Second)
 		for ; ; <-timeTicker.C {
-			// https://api-pro.coinpaprika.com/v1/tickers/
+			// gets https://api-pro.coinpaprika.com/v1/tickers/ every 10 seconds
 			tickers, err := client.Tickers.List(nil)
 			if err != nil {
 				log.Fatal(err)
