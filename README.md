@@ -20,6 +20,11 @@ and saves the results to a csv file. It also prints the results to the console.
 
 * ![Example run](media/example_run.png "example run")
 
+### Alternative 
+If you don't have Go installed, you can use the provided `script.sh` file to run the shell script, which produces similar results.
+* edit `script.sh` and add your API key
+* `sh script.sh | tee result.csv`
+
 ## Analysis 
 1. `clickhouse local` is used for analysis, just because it's our database of choice at the moment.
 You can work with Python/Pandas, DuckDB or any other database of your choice, using the CSV file as input.
