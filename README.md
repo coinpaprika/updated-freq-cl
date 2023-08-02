@@ -31,9 +31,9 @@ You can work with Python/Pandas, DuckDB or any other database of your choice, us
 
 ### Queries
 1. [query_1.sql](./query_1.sql) - show `max`, `avg`, `stdDev` time between price changes based on local time `now_timestamp` (in seconds)
-   * `cat query_1.sql | ./clickhouse local`
+   * `./clickhouse local < query_1.sql`
 2. [query_2.sql](./query_2.sql) - show `max`, `avg`, `stdDev` time between price changes based on Paprika time  `last_update_timestamp` (in seconds)
-   * `cat query_2.sql | ./clickhouse local`
+   * `./clickhouse local < query_2.sql`
 
 Running these queries on the provided `result.csv` file should give you the following results:
 (with the following average response time around 90 seconds)
