@@ -42,7 +42,8 @@ You can work with Python/Pandas, DuckDB or any other database of your choice, us
 
 Running these queries on the provided `result.csv` file should give you the following results:
 (with the following average response time around 90 seconds)
-![Example analysis](media/example_analysis.png "example_analysis")
+![Analysis](media/example_analysis.png "example_analysis")
+![Histogram](media/example_histogram.png "example_histogram")
 
 
 
