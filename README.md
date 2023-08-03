@@ -12,8 +12,8 @@ and saves the results to a csv file. It also prints the results to the console.
 * `price_changed` - `true` if the price changed since the last run, `false` otherwise
 
 ## Running
-* [Go - preferred](#Go)
-* [Shell script - alternative](#SHELL)
+* [Go - preferred](#go)
+* [Shell script - alternative](#shell)
 
 ### Go
 * all parameters besides `key` are optional
