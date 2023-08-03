@@ -12,6 +12,10 @@ and saves the results to a csv file. It also prints the results to the console.
 * `price_changed` - `true` if the price changed since the last run, `false` otherwise
 
 ## Running
+* [Go - preferred](#Go)
+* [Shell script - alternative](#SHELL)
+
+### Go
 * all parameters besides `key` are optional
 * default output file is `result.csv`
 * `go run main.go -key=your_api_key` - this will run the program, print the results to the console and save them to a file called `result.csv`
@@ -20,7 +24,7 @@ and saves the results to a csv file. It also prints the results to the console.
 
 * ![Example run](media/example_run.png "example run")
 
-### Alternative 
+### SHELL 
 If you don't have Go installed, you can use the provided `main.sh` file to run the shell script, which produces similar results.
 * edit `main.sh` and add your API key
 * `sh main.sh | tee result.csv`
